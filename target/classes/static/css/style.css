@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed', sans-serif;
+    src: url(../fonts/OpenSansCondensed-Bold.ttf)
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+body,html {
+    background: url(../wallpapers/homepage_mobile.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body, html {
+    min-height: 100%;
+    position: relative;
+}
+
+.no-background {
+    background: none;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 75px;
+}
+
+.index-title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 251px;
+    align-items: center;
+    align-content: center;
+}
+
+.panda-logo-div {
+    margin-top: -50px;
+}
+
+.panda-logo-image {
+    height: 80px;
+    width: 80px;
+}
+
+.title-text {
+    margin-top: 10px;
+    color:white;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px black;
+}
+
+.title-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 200px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-track {
+    margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 1px;
+}
+
+.title-tv {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 1px;
+}
+
+.connection-window {
+    width: 325px;
+    height: 412px;
+    margin-top: 125px;
+    background: #545353;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+    border-radius: 25px 25px 0 0;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons p {
+    text-align: center;
+}
+
+.buttons a div {
+    margin-top: 36px;
+    height: 48px;
+    width: 218px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.9;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+    text-shadow: 1px 1px 2px black;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.buttons-small {
+    margin-left: 10px;
+    height: 25px;
+    width: 70px;
+    text-transform: uppercase;
+    background-color:#9c7412;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0.7;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 25px;
+}
+
+.button-small-detail {
+    margin: auto;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-weight: lighter;
+}
+
+.button-join {
+    background-color: #9c7412;
+    color: white;
+}
+
+.button-sign {
+    background-color: #737373;
+    color: black;
+}
+
+.button-discover {
+    background-color: #737373;
+    color: #ffd013;
+}
+
+.logo-box {
+    height: 38px;
+    width: 38px;
+    background-size: contain;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.first-box {
+    margin-top: 60px;
+    height: 38px;
+    display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.child-box {
+    margin-top: 10px;
+    height: 38px;
+    display: flex;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.text-box {
+    width: 244px;
+    border-style: none;
+    border-radius: 0 10px 10px 0;
+    line-height: 38px;
+    padding-left: 15px;
+}
+
+.not-yet-window {
+    position: relative;
+    height: 50px;
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#8A8A8A;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 25px 25px;
+    opacity: 0.95;
+}
+
+.not-yet-text {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#email-logo {
+    background-image: url(../icons/email-outline.png);
+}
+
+#username-logo {
+    background-image: url(../icons/person-outline.png);
+}
+
+#password-logo {
+    background-image: url(../icons/unlock-outline.png);
+}
+
+#confirm-password-logo {
+    background-image: url(../icons/lock-outline.png);
+}
+
+.middle-bar {
+    margin-top: 20px;
+    height: 1px;
+    width: 50%;
+    background-color:#737373;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+    body,html {
+        background: url(../wallpapers/Lost_wallpaper.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .button-discover {
+        display: none;
+    }
+}
+
+
+
+
+
+
+

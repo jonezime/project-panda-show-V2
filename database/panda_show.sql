@@ -9,13 +9,16 @@
 
 CREATE TABLE tvshow(
         id_show      Int  Auto_increment  NOT NULL ,
-        image_url    Text NOT NULL ,
-        title        Varchar (255) NOT NULL ,
-        pegi         Varchar (50) NOT NULL ,
+        id_api       Int NOT NULL ,
+        poster_img   Text NOT NULL ,
+        show_img     Text NOT NULL ,
+        title        Text NOT NULL ,
+        genre        Varchar (50) NOT NULL ,
         release_year Int NOT NULL ,
         summary      Text NOT NULL ,
         casting      Text NOT NULL ,
-        creator      Varchar (255) NOT NULL
+        creator      Varchar (255) NOT NULL ,
+        season       Int NOT NULL ,
 	,CONSTRAINT show_PK PRIMARY KEY (id_show)
 )ENGINE=InnoDB;
 
