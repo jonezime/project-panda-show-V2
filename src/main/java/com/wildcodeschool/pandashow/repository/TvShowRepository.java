@@ -72,15 +72,15 @@ public class TvShowRepository {
 
             while (resultSet.next()) {
                 Long id = resultSet.getLong("id_show");
-                String urlImage = resultSet.getString("image_url");
+                String posterImg = resultSet.getString("image_url");
                 String title = resultSet.getString("title");
-                String pegi = resultSet.getString("pegi");
+                String genre = resultSet.getString("pegi");
                 int releaseYear = resultSet.getInt("release_year");
                 String summary = resultSet.getString("summary");
                 String casting = resultSet.getString("casting");
                 String creator = resultSet.getString("creator");
                 int season = resultSet.getInt("season");
-                shows.add(new TvShow(id, urlImage, title, pegi, releaseYear, summary, casting, creator, season));
+                shows.add(new TvShow(id, posterImg, title, genre, releaseYear, summary, casting, creator, season));
             }
 
         } catch (SQLException e) {
@@ -106,5 +106,35 @@ public class TvShowRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public TvShow saveNewShow(Long idApi, String posterImg, String showImg, String title, String genre, Long releaseYear, String summary, String casting, String creator) {
+
+        try {
+            Connection connection = DriverManager.getConnection(
+                    DB_URL, DB_USER, DB_PASSWORD
+            );
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO `tvshow` (id_api, poster_img, show_img, title, genre, release_year, summary, casting, creator)" +
+                            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);"
+            );
+            statement.setLong(1, idApi);
+            statement.setString(2, posterImg);
+            statement.setString(3, showImg);
+            statement.setString(4, title);
+            statement.setString(5, genre);
+            statement.setLong(6, releaseYear);
+            statement.setString(7, summary);
+            statement.setString(8, casting);
+            statement.setString(9, creator);
+
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to delete data");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }

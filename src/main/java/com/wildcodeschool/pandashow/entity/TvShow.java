@@ -5,9 +5,11 @@ import java.util.List;
 public class TvShow {
 
     private Long id;
-    private String urlImage;
+    private Long idApi;
+    private String posterImg;
+    private String showImg;
     private String title;
-    private String pegi;
+    private String genre;
     private int releaseYear;
     private String summary;
     private String casting;
@@ -15,11 +17,11 @@ public class TvShow {
     private int season;
     private List<Long> seasonIdList;
 
-    public TvShow(Long id, String urlImage, String title, String pegi, int releaseYear, String summary, String casting, String creator, int season, List<Long> seasonIdList) {
+    public TvShow(Long id, String posterImg, String title, String genre, int releaseYear, String summary, String casting, String creator, int season, List<Long> seasonIdList) {
         this.id = id;
-        this.urlImage = urlImage;
+        this.posterImg = posterImg;
         this.title = title;
-        this.pegi = pegi;
+        this.genre = genre;
         this.releaseYear = releaseYear;
         this.summary = summary;
         this.casting = casting;
@@ -28,16 +30,27 @@ public class TvShow {
         this.seasonIdList = seasonIdList;
     }
 
-    public TvShow(Long id, String urlImage, String title, String pegi, int releaseYear, String summary, String casting, String creator, int season) {
+    public TvShow(Long id, String posterImg, String title, String genre, int releaseYear, String summary, String casting, String creator, int season) {
         this.id = id;
-        this.urlImage = urlImage;
+        this.posterImg = posterImg;
         this.title = title;
-        this.pegi = pegi;
+        this.genre = genre;
         this.releaseYear = releaseYear;
         this.summary = summary;
         this.casting = casting;
         this.creator = creator;
         this.season = season;
+    }
+
+    public TvShow(Long id, Long idApi, String posterImg, String showImg, String title, String genre, int releaseYear, String summary) {
+        this.id = id;
+        this.idApi = idApi;
+        this.posterImg = posterImg;
+        this.showImg = showImg;
+        this.title = title;
+        this.genre = genre;
+        this.releaseYear = releaseYear;
+        this.summary = summary;
     }
 
     public Long getId() {
@@ -48,12 +61,28 @@ public class TvShow {
         this.id = id;
     }
 
-    public String getUrlImage() {
-        return urlImage;
+    public Long getIdApi() {
+        return idApi;
     }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
+    public void setIdApi(Long idApi) {
+        this.idApi = idApi;
+    }
+
+    public String getPosterImg() {
+        return posterImg;
+    }
+
+    public void setPosterImg(String posterImg) {
+        this.posterImg = posterImg;
+    }
+
+    public String getShowImg() {
+        return showImg;
+    }
+
+    public void setShowImg(String showImg) {
+        this.showImg = showImg;
     }
 
     public String getTitle() {
@@ -64,12 +93,10 @@ public class TvShow {
         this.title = title;
     }
 
-    public String getPegi() {
-        return pegi;
-    }
+    public String getGenre() { return genre; }
 
-    public void setPegi(String pegi) {
-        this.pegi = pegi;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public int getReleaseYear() {
